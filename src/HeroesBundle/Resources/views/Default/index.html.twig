@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Heroes</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+
+
+</head>
+
+<body>
+<section class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for characters in character|slice(100,20) %}
+                <tr>
+                    <td><a href="{{ path('heroes_default_description', {'id': characters.id}) }}">{{ characters.name }}</a></td>
+                    <td><img class="image-marvel" src="{{ characters.thumbnail.path }}.{{ characters.thumbnail.extension }}"></td>
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</html>

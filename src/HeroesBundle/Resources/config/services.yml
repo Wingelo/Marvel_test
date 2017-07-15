@@ -1,0 +1,4 @@
+services:
+#    heroes.example:
+#        class: HeroesBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
