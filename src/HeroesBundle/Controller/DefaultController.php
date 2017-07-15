@@ -22,8 +22,19 @@ class DefaultController extends Controller
         $privateApiKey = $this->getParameter('private_key_marvel');
 
         $client = new Client($privateApiKey, $publicApiKey);
+        $cachedMarvel = $this->get('cache.app')->getItem('character');
 
-        $character = $client->characters();
+        if(!$cachedMarvel->isHit()){
+            $character = $client->characters();
+            $cachedMarvel->set($character);
+            $this->get('cache.app')->save($cachedMarvel);
+        } else {
+            $character = $cachedMarvel->get();
+            var_dump($character);
+        }
+
+
+
 
         return $this->render('HeroesBundle:Default:index.html.twig', array(
             'character' => $character

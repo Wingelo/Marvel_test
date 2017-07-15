@@ -15,5 +15,8 @@ parameters:
     mailer_user: ~
     mailer_password: ~
 
+    public_key_marvel:
+    private_key_marvel:
+
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
