@@ -1,6 +1,6 @@
-<h1>Test Marvel Heroes
+<h1>Test Marvel Heroes</h1>
 
-<h2>Enonce
+<h2>Enonce</h2>
 
  * A partir de l'API Marvel https://developer.marvel.com/ , affichez une liste de 20 personnages à partir du centième. Chaque item de la liste doit avoir le nom du personnage et son image et un clic sur son nom doit afficher le détail du personnage avec les informations suivantes : name / description / image / le nombre de comics où le personnage apparait / les titres des 3 premiers comics où le personnage apparait 
  * L'application doit être testée 
@@ -19,7 +19,7 @@
  * application client/serveur : PHP, NodeJs avec ou sans persistence de donnée 
  
 
-<h2>Installation
+<h2>Installation</h2>
 
 **1- Récuperer les clés private et public de l'API Marvel**
 
@@ -48,7 +48,7 @@ Dans l'inviter commande
 ```php bin/console server:start```
 
 
-<h2> Remarque 
+<h2> Remarque </h2>
 
 - utilisations de Symfony 3.3
 
