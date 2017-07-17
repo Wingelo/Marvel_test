@@ -30,6 +30,14 @@ Cliquez ici pour accéder au site [Marvel](https://developer.marvel.com/)
 
 ``` composer install ```
 
+**2.1-Création de la base de données**
+
+```php bin/console doctrine:database:create```
+
+**2.2- Mise à jour de la base de données**
+
+```php bin/console doctrine:schema:update --force```
+
 **3-Insérer la clé API public et private**
 
 Dans ```app/config/parameters.yml```
@@ -43,6 +51,8 @@ Mettre les clés private et public
 
 **4-Démarrer le serveur web**
 
+**Samedi 15 juillet**
+
 Dans l'inviter commande
 
 ```php bin/console server:start```
@@ -50,7 +60,7 @@ Dans l'inviter commande
 
 <h2> Remarque </h2>
 
-- utilisations de Symfony 3.3
+- utilisation de Symfony 3.3
 
 - utilisation d'un php client marvel api 
 
@@ -60,3 +70,16 @@ Dans l'inviter commande
 
 - optimisation : Mettre en place un système de cache pour optimiser la vitesse
 
+**Lundi 17 juillet**
+
+- mise à jour du readme
+
+- j'ai ajouté la fonctionnalité de favoris jusqu'à 5 héros  
+
+- persistence de données dans une base de donnée(favorites_heroes)
+
+- création d'entité FavoritesHeroes
+
+- amélioration du style de la page
+
+- temps : 2 heures

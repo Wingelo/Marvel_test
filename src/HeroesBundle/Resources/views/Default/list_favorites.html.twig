@@ -1,0 +1,30 @@
+{% include "@Heroes/Default/Structure/header.html.twig" %}
+<body>
+{% include "@Heroes/Default/Structure/navbar.html.twig" %}
+<section class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for listfavorites in favorites %}
+                    <tr>
+                        <td><a href="{{ path('heroes_default_description', {'id': listfavorites.code}) }}">{{ listfavorites.name }}</a></td>
+                        <td><img class="image-marvel" src="{{ listfavorites.image }}"></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+</body>
+{% include "@Heroes/Default/Structure/script.html.twig" %}
+</html>
