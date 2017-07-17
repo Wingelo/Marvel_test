@@ -30,7 +30,6 @@ class DefaultController extends Controller
             $this->get('cache.app')->save($cachedMarvel);
         } else {
             $character = $cachedMarvel->get();
-            var_dump($character);
         }
 
 

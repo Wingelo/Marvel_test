@@ -14,23 +14,34 @@
 </head>
 
 <body>
-    <section>
-        <h3>Name</h3>
-        <p>{{ character.name }}</p>
-        <h3>Description</h3>
-        {% if character.description is not empty  %}
-            <p>{{ character.description}}</p>
-        {% else %}
-            <p>No description</p>
-        {% endif %}
-        <h3>Image</h3>
-        <img class="image-marvel" src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}">
-        <h3>Numbers Comics</h3>
-        {{ comics | length}}
-        <h3>Titles where it appears</h3>
-        {% for comic in comics|slice(0,3) %}
-            <p>{{ comic.title }}</p>
-        {% endfor %}
+    <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+        <a class="navbar-brand" href="{{ path('heroes_default_index') }}">
+            <img  id="image-marvel-nav" src="{{ asset('images/Marvel-comics-logo-vector.png') }}" width="50"  alt="">
+        </a>
+    </nav>
+    <section class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <img class="image-marvel" src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}" id="marvel-position">
+            </div>
+            <div class="col-xs-6">
+                <h3>Name</h3>
+                <p>{{ character.name }}</p>
+                <h3>Description</h3>
+                {% if character.description is not empty  %}
+                    <p>{{ character.description}}</p>
+                {% else %}
+                    <p>No description</p>
+                {% endif %}
+
+                <h3>Numbers Comics</h3>
+                {{ comics | length}}
+                <h3>Titles where it appears</h3>
+                {% for comic in comics|slice(0,3) %}
+                    <p>{{ comic.title }}</p>
+                {% endfor %}
+            </div>
+        </div>
     </section>
 
 
