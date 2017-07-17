@@ -51,7 +51,7 @@ Mettre les clés private et public
 
 **4-Démarrer le serveur web**
 
-**Samedi 15 juillet**
+
 
 Dans l'inviter commande
 
@@ -59,6 +59,8 @@ Dans l'inviter commande
 
 
 <h2> Remarque </h2>
+
+**Samedi 15 juillet**
 
 - utilisation de Symfony 3.3
 
@@ -72,7 +74,7 @@ Dans l'inviter commande
 
 **Lundi 17 juillet**
 
-- mise à jour du readme
+- mise à jour du readme.md
 
 - j'ai ajouté la fonctionnalité de favoris jusqu'à 5 héros  
 
